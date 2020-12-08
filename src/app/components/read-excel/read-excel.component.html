@@ -1,0 +1,31 @@
+<h3 class="text-center">Excel Read</h3>
+<div class="container">
+  <input
+    type="file"
+    name=""
+    id=""
+    multiple="false"
+    (change)="onFileChange($event)"
+  />
+</div>
+
+<table class="table" *ngIf="data">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Salario</th>
+      <th>Edad</th>
+    </tr>
+  </thead>
+
+  <tbody *ngFor="let row of data">
+    <!-- <tr *ngFor="let row of data">
+      <td *ngFor="let cell of row; let i = index">{{ cell }} - {{ i }}</td>
+    </tr> -->
+    <tr>
+      <td>{{ row.nombre }}</td>
+      <td>{{ row.salario }}</td>
+      <td>{{ row.edad }}</td>
+    </tr>
+  </tbody>
+</table>
